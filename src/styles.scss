@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+
+
+:root{
+    
+    --secondary-color-600: #252F40;
+
+    --gray-color-black: #000000;
+    --gray-color-500: #595959;
+}
