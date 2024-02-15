@@ -22,7 +22,9 @@
     height: 60px;
     display: flex;
     flex-wrap: wrap;
-    box-shadow: 0 .25rem .375rem -.0625rem hsla(0,0%,8%,.12),0 .125rem .25rem -.0625rem hsla(0,0%,8%,.07)!important;
+    box-shadow: 0 8px 26px 4px hsla(0, 0%, 8%, 0.055),-10px 10px 15px -5px hsla(31, 45%, 77%, 0.904)!important;
+    box-shadow: 0 .25rem .375rem -.0625rem hsla(0, 0%, 8%, 0.103),0 .125rem .25rem -.0625rem hsla(31, 45%, 77%, 0.904)!important;
+    // box-shadow: 0 .25rem .375rem -.0625rem hsla(0,0%,8%,.12),0 .125rem .25rem -.0625rem hsla(0,0%,8%,.07)!important;
     margin-top: 1rem;
     align-items: center;
     padding-top: 0.5rem;
