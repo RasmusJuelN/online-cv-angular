@@ -12,7 +12,7 @@
             <br class="home-text03" />
             <br class="home-text04" />
             <span>
-              Welcome to my online CV. Here you can learn about me as a person,
+              Welcome to my online CV. Take a look around to learn about me as a person,
               what projects i have been working on, and which qualifications I have
               obtained so far during my studies.
             </span>
@@ -63,15 +63,39 @@
   </div>
   <div class="about-text">
     <span class="about-text01">
-      I am 30 years old, from north zealand and currently living in Copenhagen 10 years runnning. I started my journey as a software engineer almost 3 years ago when i decided it was time for a change of pace. I actually had no real experience in writing code, but was something that had always been on my radar to learn, and wanted to take a 180 degree turn in my careerway. Software Engeneering is an exciting field that is constantly evolving, which is perfect for me, as i love being challenged and learning new technologies. And then I find it amazing how i am able to be creative and develop something useful for all kinds of people and businesses.
+      I am 30 years old, from north zealand and currently living in Copenhagen 10 years runnning. I started my journey as a software engineer almost 3 years ago when i decided it was time for a change of pace. I actually had no real experience in writing code, but was something that had always been on my radar to learn, and wanted to take a 180 degree turn in my careerway. Software Engeneering is an exciting field that is constantly evolving, which is perfect for me, as i love challenges and learning new technologies to create useful solutions for all kinds of people and businesses.
     </span>
-    <i class="fa fa-address-book" ></i>
+    
+    <!-- <img src="/assets/icons8-ok.svg" alt="icon"> -->
     <br>
     <br>
-    <app-about-card 
-  [icon]="faCoffee" 
-  [title]="'About Us'" 
-  [text]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'">
-  </app-about-card>
+  </div>
+    <div class="about-card-container">
+    <app-about-card *ngFor="let card of cards; let i = index" 
+    [svgContent]="card.svgContent" 
+    [title]="card.title" 
+    [text]="card.text"
+    [isEven]="i % 2 === 0">
+    
+    </app-about-card>
+  </div>
+</div>
+
+<div class="home-skills">
+  <div class="home-skills-container1">
+    <div class="divider">
+      <div class="curved upper">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319"><linearGradient id="grad1" x1="0%" x2="100%" y1="0%" y2="0%"><stop offset="0%" stop-color="#a4d5ca" /><stop offset="100%" stop-color="#fff" /></linearGradient><path fill="url(#grad1)" fill-opacity="1" d="M0,192L60,202.7C120,213,240,235,360,234.7C480,235,600,213,720,192C840,171,960,149,1080,144C1200,139,1320,149,1380,154.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+      </div>
+      <div class="curved">
+        <h1 class="home-text"> Hello</h1>
+        <span class="home-text02">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque error tempora repellat commodi hic necessitatibus? Velit ipsa modi iure est, ab amet esse, alias veniam sequi aliquid architecto similique perspiciatis labore repellat corrupti aperiam qui voluptatum ea voluptates ullam reprehenderit.</span>
+        <span class="home-text02">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque error tempora repellat commodi hic necessitatibus? Velit ipsa modi iure est, ab amet esse, alias veniam sequi aliquid architecto similique perspiciatis labore repellat corrupti aperiam qui voluptatum ea voluptates ullam reprehenderit.</span>
+        <span class="home-text02">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque error tempora repellat commodi hic necessitatibus? Velit ipsa modi iure est, ab amet esse, alias veniam sequi aliquid architecto similique perspiciatis labore repellat corrupti aperiam qui voluptatum ea voluptates ullam reprehenderit.</span>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319"><path fill="#fff" fill-opacity="1" d="M0,192L60,202.7C120,213,240,235,360,234.7C480,235,600,213,720,192C840,171,960,149,1080,144C1200,139,1320,149,1380,154.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+      </div>
+  </div>
+    
   </div>
 </div>

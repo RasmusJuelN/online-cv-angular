@@ -35,7 +35,7 @@
     // box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px inset, rgb(255, 255, 255) -10px 10px 0px -3px, rgb(31, 193, 27) -10px 10px, rgb(255, 255, 255) -20px 20px 0px -3px, rgb(255, 217, 19) -20px 20px, rgb(255, 255, 255) -30px 30px 0px -3px, rgb(255, 156, 85) -30px 30px, rgb(255, 255, 255) -40px 40px 0px -3px, rgb(255, 85, 85) -40px 40px;
     // box-shadow: rgb(253, 204, 161) -40px 10px 105px -22px;
     // box-shadow:0 0 20px -4px hsla(0, 0%, 0%, 0.463), rgba(237, 122, 29, 0.2) -10px 10px, rgb(253, 204, 161, 0.3) -20px 20px, rgb(253, 204, 161, 0.2) -30px 30px, rgb(253, 204, 161, 0.1) -40px 40px, rgb(253, 204, 161, 0.05) -50px 50px;
-    box-shadow: 0 8px 26px 4px hsla(0, 0%, 8%, 0.055),-10px 10px 15px -5px hsla(31, 45%, 77%, 0.904)!important;
+    box-shadow: 0 8px 26px 4px hsla(0, 0%, 8%, 0.055),-10px 10px 15px -5px hsla(0, 0%, 0%, 0.089)!important;
     align-items: flex-start;
     border-radius: 1rem;
     flex-direction: column;
@@ -57,6 +57,7 @@
     -webkit-text-fill-color: transparent;
   }
   .home-text01 {
+    
     color: var(--secondary-color-600);
     font-size: 1.1rem;
     font-weight: 400;
@@ -134,56 +135,67 @@
   }
 
   .home-about{
-    height: 80vh;
+    height: 100%;
     width: 60%;
 
     padding:2rem;
     display:flex;
     margin:auto;
-    margin-top:4rem;
+    margin-top:2rem;
     flex-direction: column;
   }
 
-  .about-text{
 
-  }
   .about-text {
     color: var(--secondary-color-600);
     font-size: 1.1rem;
     font-weight: 400;
     line-height: 1.625;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     text-decoration: none;
+    text-align: center;
   }
 
-  .about-container {
-    display: flex;
+
+  .about-card-container {
     flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .about-item {
-    width: calc(50% - 20px);
-    margin-bottom: 40px;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-  }
-  
-  .about-item:nth-child(odd) {
-    float: right;
-  }
-  
-  .about-item:nth-child(even) {
-    float: left;
-  }
-  
-  .about-item h1 {
-    color: #333;
-  }
-  
-  .about-item p {
-    color: #666;
+    text-align: center;
   }
 
+  app-about-card {
+    max-width: 700px; // Adjust this value as needed
+    width: 100%;
+    &:nth-child(odd) {
+      float: left;
+      clear:both;
+    }
+  
+    &:nth-child(even) {
+      float: right;
+      clear:both;
+    }
+  }
+  
 
+  .home-skills{
+    height:100%;
+    width: 100%;
+
+    margin-bottom:4rem;
+  }
+  .curved{
+
+    background: #90d3c8;
+    background-image: linear-gradient(to right, #a4d5ca 0%, rgb(255, 255, 255) 100%);
+    svg{
+      display:block;
+    }
+  }
+
+  .curved.upper svg{
+    background:white;
+  }
+  
+ 
+
+  
