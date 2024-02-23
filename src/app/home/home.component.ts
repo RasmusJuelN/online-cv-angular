@@ -47,8 +47,8 @@ export class HomeComponent {
         const diffX = centerX - x;
         const diffY = centerY - y;
 
-        const moveX = diffX / centerX * -50; // max move 50px
-        const moveY = diffY / centerY * -50; // max move 50px
+        const moveX = diffX / centerX * -70; // max move 50px
+        const moveY = diffY / centerY * -70; // max move 50px
 
         circle.nativeElement.style.transform = `translate(${moveX}px, ${moveY}px)`;
       });

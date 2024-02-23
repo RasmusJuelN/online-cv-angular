@@ -263,12 +263,26 @@
   position: absolute;
   border-radius: 50%;
   text-align: center;
+  background-image: linear-gradient(to bottom, rgb(247, 154, 78) 0%, rgb(248, 211, 87) 100%);
   transition:transform 1s ease-out;
   box-shadow: 2px 5px 10px 5px hsla(0, 0%, 8%, 0.155),-10px 10px 15px -5px hsla(0, 0%, 0%, 0.089)!important;
  
   &:hover{
     box-shadow: 2px 5px 10px 5px hsla(0, 0%, 100%, 0.555),-10px 10px 15px -5px hsla(0, 0%, 0%, 0.089)!important;
     color:white;
+  }
+
+  ::before{
+    content: "";
+    position: absolute;
+    top: 1%;
+    left: 5%;
+    width: 90%;
+    height: 80%;
+    border-radius: 50%;
+    background: radial-gradient(circle at 50% 0px, #ffffff, rgba(255, 255, 255, 0) 58%);
+    filter: blur(6px);
+    z-index: 2;
   }
   
   }
@@ -278,10 +292,10 @@
     width: 150px;
     height: 150px;
     font-size: 1.5em;
-    background-color: #f7c66b;
+    // background-image: linear-gradient(to bottom, rgb(247, 131, 78) 0%, rgb(248, 192, 87) 100%);
     top: 35%;
     left: 39%;
- 
+    
     
   }
   
@@ -291,6 +305,8 @@
     width: 130px;
     height: 130px;
     font-size: 1.2em;
+    
+    // background-image: linear-gradient(to bottom, rgb(247, 131, 78) 0%, rgb(248, 192, 87) 100%);
     background-color: #f7c66b;
     
     
@@ -301,7 +317,8 @@
     left: 50%;
     width: 130px;
     height: 130px;
-    font-size: 1em;
+    font-size: 1em; 
+    // background-image: linear-gradient(to right, rgb(43, 171, 245) 0%, rgb(59, 247, 231) 100%);
     background-color: rgb(142, 240, 235);
   }
 
@@ -312,6 +329,7 @@
     width: 100px;
     height: 100px;
     font-size: 1em;
+    // background-image: linear-gradient(to right, rgb(43, 171, 245) 0%, rgb(59, 247, 231) 100%);
     background-color: rgb(142, 240, 235);
   }
 
@@ -322,6 +340,7 @@
     width: 100px;
     height: 100px;
     font-size: 1em;
+    // background-image: linear-gradient(to right, rgb(43, 171, 245) 0%, rgb(59, 247, 231) 100%);
     background-color: rgb(142, 240, 235);
   }
   .circle[data="Python"] {
@@ -330,6 +349,7 @@
     width: 70px;
     height: 70px;
     font-size: 1em;
+    // background-image: linear-gradient(to bottom, rgb(247, 131, 78) 0%, rgb(248, 192, 87) 100%);
     background-color: #f7c66b;
   }
 
@@ -339,6 +359,7 @@
     width: 70px;
     height: 70px;
     font-size: 1em;
+    // background-image: linear-gradient(to bottom, rgb(247, 131, 78) 0%, rgb(248, 192, 87) 100%);
     background-color: #f7c66b;
   }
   
@@ -348,6 +369,7 @@
     width: 90px;
     height: 90px;
     font-size: 1em;
+    // background-image: linear-gradient(to bottom, rgb(247, 131, 78) 0%, rgb(248, 192, 87) 100%);
     background-color: #f7c66b;
   }
 
@@ -357,6 +379,7 @@
     width: 110px;
     height: 110px;
     font-size: 1em;
+    // background-image: linear-gradient(to right, rgb(47, 240, 105) 0%, rgb(163, 250, 163) 100%);
     background-color: rgb(137, 240, 151);
   }
   .circle[data="Angular"] {
@@ -366,6 +389,7 @@
     width: 110px;
     height: 110px;
     font-size: 1em;
+    // background-image: linear-gradient(to right, rgb(47, 240, 105) 0%, rgb(163, 250, 163) 100%);
     background-color: rgb(137, 240, 151);
   }
   .circle[data="Docker"] {
@@ -375,6 +399,7 @@
     width: 70px;
     height: 70px;
     font-size: 1em;
+    // background-image: linear-gradient(to right, rgb(248, 224, 10) 0%, rgb(252, 250, 175) 100%);
     background-color: rgb(240, 238, 137);
   }
   .circle[data="Github"] {
@@ -383,6 +408,7 @@
     width: 90px;
     height: 90px;
     font-size: 1em;
+    // background-image: linear-gradient(to right, rgb(248, 224, 10) 0%, rgb(248, 247, 152) 100%);
     background-color: rgb(240, 238, 137);
   }
  
@@ -392,6 +418,7 @@
     width: 110px;
     height: 110px;
     font-size: 1em;
+    // background-image: linear-gradient(to bottom, rgb(247, 131, 78) 0%, rgb(248, 192, 87) 100%);
     background-color: #f7c66b;
   }
 
@@ -401,6 +428,7 @@
     width: 70px;
     height: 70px;
     font-size: 1em;
+    // background-image: linear-gradient(to right, rgb(47, 240, 105) 0%, rgb(163, 250, 163) 100%);
     background-color: rgb(137, 240, 151);
   }
  
