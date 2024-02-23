@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core'; 
+import { Component, ElementRef, Input, OnInit, ViewChild, AfterViewInit, ViewChildren, QueryList } from '@angular/core'; 
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -9,7 +9,12 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 })
 export class HomeComponent {
   // faCoffee = faCoffee;
+  @ViewChild('circleWrapper', { static: false }) circleWrapper!: ElementRef;
+  @ViewChildren('circle') circles!: QueryList<ElementRef>;
+  @ViewChild('circle', { static: false }) circle!: ElementRef;
+  resetting = false;
 
+  constructor() { }
   
   svg1: string = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0,0,256,256"style="fill:#000000;"><defs><linearGradient x1="18" y1="15.125" x2="18" y2="25.288" gradientUnits="userSpaceOnUse" id="color-1_44014_gr1"><stop offset="0" stop-color="#5dddd4"></stop><stop offset="1" stop-color="#fc9219"></stop></linearGradient><linearGradient x1="32" y1="7.833" x2="32" y2="56.674" gradientUnits="userSpaceOnUse" id="color-2_44014_gr2"><stop offset="0" stop-color="#5dddd4"></stop><stop offset="1" stop-color="#fc9219"></stop></linearGradient></defs><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(4,4)"><path d="M18.612,15.501l0.285,1.412c0.223,1.104 1.085,1.967 2.189,2.189l1.412,0.285c0.668,0.135 0.668,1.09 0,1.225l-1.412,0.285c-1.104,0.223 -1.967,1.085 -2.189,2.189l-0.285,1.412c-0.135,0.668 -1.09,0.668 -1.225,0l-0.285,-1.412c-0.223,-1.104 -1.085,-1.967 -2.189,-2.189l-1.412,-0.285c-0.668,-0.135 -0.668,-1.09 0,-1.225l1.412,-0.285c1.104,-0.223 1.967,-1.085 2.189,-2.189l0.285,-1.412c0.135,-0.668 1.091,-0.668 1.225,0z" fill="url(#color-1_44014_gr1)"></path><path d="M53,27h-3v-4c0,-2.757 -2.243,-5 -5,-5h-2c-1.641,0 -3.088,0.806 -4,2.031c-0.912,-1.225 -2.359,-2.031 -4,-2.031h-2c-1.152,0 -2.201,0.407 -3.047,1.065c-0.481,-6.181 -5.652,-11.065 -11.953,-11.065c-6.617,0 -12,5.383 -12,12c0,4.74 2.726,8.946 7,10.9v2.1c-1.103,0 -2,0.897 -2,2v2c0,1.103 0.897,2 2,2h1v1c0,1.103 0.897,2 2,2h4c0,2.415 1.721,4.434 4,4.899v4.101c0,2.757 2.243,5 5,5h6c1.641,0 3.088,-0.806 4,-2.031c0.912,1.225 2.359,2.031 4,2.031h6c2.757,0 5,-2.243 5,-5v-4.101c2.279,-0.465 4,-2.484 4,-4.899v-10c0,-2.757 -2.243,-5 -5,-5zM14.364,29.307c-3.866,-1.512 -6.364,-5.165 -6.364,-9.307c0,-5.514 4.486,-10 10,-10c5.514,0 10,4.486 10,10c0,4.142 -2.498,7.795 -6.364,9.307l-0.636,0.249v3.444h-2v-3h-2v3h-2v-3.444zM13,35h10v2h-10zM16,40v-1h4v1zM56,42c0,1.654 -1.346,3 -3,3h-5c-1.654,0 -3,1.346 -3,3v2h2v-2c0,-0.552 0.448,-1 1,-1h4v4c0,1.654 -1.346,3 -3,3h-6c-1.654,0 -3,-1.346 -3,-3v-3v-3c0,-0.552 0.448,-1 1,-1h2v-2h-2c-1.654,0 -3,1.346 -3,3v3v3c0,1.654 -1.346,3 -3,3h-6c-1.654,0 -3,-1.346 -3,-3v-4h4c0.552,0 1,0.448 1,1v2h2v-2c0,-1.654 -1.346,-3 -3,-3h-5c-1.654,0 -3,-1.346 -3,-3v-2v-1h1c1.103,0 2,-0.897 2,-2v-2c0,-1.103 -0.897,-2 -2,-2v-2.1c1.113,-0.509 2.118,-1.173 3,-1.957v0.057h2v3h2v-7v-2c0,-1.654 1.346,-3 3,-3h2c1.654,0 3,1.346 3,3v8v1c0,0.552 -0.448,1 -1,1h-2v2h2c1.654,0 3,-1.346 3,-3v-1v-8c0,-1.654 1.346,-3 3,-3h2c1.654,0 3,1.346 3,3v9h2v-3h3c1.654,0 3,1.346 3,3z" fill="url(#color-2_44014_gr2)"></path></g></g></svg>';
   svg2: string = '<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0,0,256,256"style="fill:#000000;"><defs><linearGradient x1="20.499" y1="13.001" x2="20.499" y2="23.584" gradientUnits="userSpaceOnUse" id="color-1_44045_gr1"><stop offset="0" stop-color="#75e9e1"></stop><stop offset="1" stop-color="#fc9219"></stop></linearGradient><linearGradient x1="24.511" y1="5.27" x2="26.011" y2="59.777" gradientUnits="userSpaceOnUse" id="color-2_44045_gr2"><stop offset="0" stop-color="#6bd8c7"></stop><stop offset="1" stop-color="#fc9219"></stop></linearGradient><linearGradient x1="31.109" y1="5.089" x2="32.609" y2="59.595" gradientUnits="userSpaceOnUse" id="color-3_44045_gr3"><stop offset="0" stop-color="#6bd8c7"></stop><stop offset="1" stop-color="#fc9219"></stop></linearGradient></defs><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(4,4)"><path d="M25,14.001c-5,0 -9.002,3.999 -9.002,8.999h9.002z" fill="url(#color-1_44045_gr1)"></path><path d="M24.999,10c-7.169,0 -13.002,5.832 -13.002,13.002c0,7.17 5.833,13.002 13.002,13.002c7.169,0 13.002,-5.832 13.002,-13.002c0,-7.17 -5.833,-13.002 -13.002,-13.002zM24.999,34.003c-6.066,0 -11.001,-4.935 -11.001,-11.001c0,-6.066 4.935,-11.001 11.001,-11.001c6.066,0 11.001,4.935 11.001,11.001c0,6.066 -4.935,11.001 -11.001,11.001z" fill="url(#color-2_44045_gr2)"></path><path d="M54.77,48.559l-8.752,-9.864c-0.719,-0.812 -1.995,-0.92 -2.845,-0.243l-2.486,1.973l-4.125,-4.994c3.337,-3.106 5.439,-7.521 5.439,-12.429c0,-9.375 -7.627,-17.002 -17.002,-17.002c-9.375,0 -17.002,7.627 -17.002,17.002c0,9.375 7.627,17.002 17.002,17.002c3.749,0 7.207,-1.234 10.021,-3.298l4.099,4.963l-2.366,1.877c-0.434,0.344 -0.698,0.832 -0.746,1.374c-0.047,0.539 0.127,1.06 0.49,1.469l8.753,9.865c1.022,1.152 2.489,1.746 3.965,1.746c1.169,0 2.344,-0.373 3.307,-1.137l1.607,-1.274c1.08,-0.858 1.739,-2.068 1.856,-3.406c0.115,-1.324 -0.316,-2.611 -1.215,-3.624zM9.997,23.002c0,-8.272 6.73,-15.002 15.002,-15.002c8.272,0 15.002,6.73 15.002,15.002c0,8.272 -6.729,15.002 -15.002,15.002c-8.273,0 -15.002,-6.73 -15.002,-15.002zM48.642,44.666l-6.467,5.133l-1.477,-1.656l6.472,-5.136zM44.418,40.018c0.013,-0.01 0.03,-0.014 0.049,-0.014c0.022,0 0.045,0.007 0.055,0.018l1.319,1.487l-6.476,5.139l-1.368,-1.534zM52.885,54.022l-1.607,1.274c-1.361,1.081 -3.394,0.915 -4.532,-0.369l-3.239,-3.632l6.464,-5.13l3.303,3.722c0.53,0.598 0.785,1.351 0.718,2.122c-0.068,0.786 -0.462,1.501 -1.107,2.013z" fill="url(#color-3_44045_gr3)"></path></g></g></svg>';
@@ -22,4 +27,43 @@ export class HomeComponent {
     {svgContent: this.svg4, title: 'Connected', text: 'Communicating and collaborating with others to create a positive and productive environment, both inside and outside of work.'}
     // Add more cards as needed
   ];
+
+  ngAfterViewInit() {
+    this.handleMouseMove();
+    this.handleMouseLeave();
+  }
+
+  handleMouseMove() {
+    this.circles.forEach((circle) => {
+      circle.nativeElement.addEventListener('mousemove', (e: any) => {
+        if (this.resetting) return;
+        const rect = circle.nativeElement.getBoundingClientRect();
+        const x = e.clientX - rect.left; //x position within the element.
+        const y = e.clientY - rect.top;  //y position within the element.
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const diffX = centerX - x;
+        const diffY = centerY - y;
+
+        const moveX = diffX / centerX * -50; // max move 50px
+        const moveY = diffY / centerY * -50; // max move 50px
+
+        circle.nativeElement.style.transform = `translate(${moveX}px, ${moveY}px)`;
+      });
+    });
+  }
+
+  handleMouseLeave() {
+    this.circles.forEach((circle) => {
+      circle.nativeElement.addEventListener('mouseleave', () => {
+        this.resetting = true;
+        circle.nativeElement.style.transform = `translate(0px, 0px)`;
+        setTimeout(() => this.resetting = false, 1);
+      });
+    });
+  }
 }
+
+
