@@ -28,6 +28,11 @@ export class HomeComponent {
     // Add more cards as needed
   ];
 
+  projects = [
+    {title: 'Project 1', description: 'This is a description of project 1', skills:['C#', 'Angular', 'ASP.NET', 'API', 'JS', 'HTML', 'CSS', 'Github'], image: 'https://media.istockphoto.com/id/1322220448/photo/abstract-digital-futuristic-eye.jpg?s=612x612&w=0&k=20&c=oAMmGJxyTTNW0XcttULhkp5IxfW9ZTaoVdVwI2KwK5s='},
+  ]
+
+
   ngAfterViewInit() {
     this.handleMouseMove();
     this.handleMouseLeave();

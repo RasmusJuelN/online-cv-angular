@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { AboutCardComponent } from './about-card/about-card.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ProjectCardComponent } from './project-card/project-card.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HeaderComponent,
     HomeComponent,
     AboutCardComponent,
+    ProjectCardComponent,
     
   ],
   imports: [

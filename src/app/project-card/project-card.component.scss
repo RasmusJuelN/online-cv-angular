@@ -1,0 +1,55 @@
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.project-header{
+        font-size: 1.5rem;
+        align-self: flex-start;
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 2rem;
+}
+
+.card {
+    display: flex;
+    width: 100%;
+    height:100%;
+  }
+  
+  .left-section {
+    padding: 2rem;
+    width: 45%;
+  }
+  
+  .right-section {
+    padding: 2rem;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .skills-container {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .skill-section {
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    display: inline-block;
+    background-color: var(--primary-bluegreen-color);
+    color: rgb(0, 0, 0);
+    margin-right: 10px; /* Adjust as needed */
+    margin-bottom: 10px;
+    font-size: 12px;
+    padding: 4px 10px 4px 10px; /* Adjust as needed */
+  }
+
+
+
+  
