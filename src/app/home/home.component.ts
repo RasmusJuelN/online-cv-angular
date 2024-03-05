@@ -1,6 +1,7 @@
 import { Component, ElementRef, Input, OnInit, ViewChild, AfterViewInit, ViewChildren, QueryList } from '@angular/core'; 
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +9,7 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+
   // faCoffee = faCoffee;
   @ViewChild('circleWrapper', { static: false }) circleWrapper!: ElementRef;
   @ViewChildren('circle') circles!: QueryList<ElementRef>;
@@ -28,14 +30,43 @@ export class HomeComponent {
     // Add more cards as needed
   ];
 
+   customOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: true,
+    navSpeed: 700,
+    stagePadding: 80,
+    margin: 20,
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 1
+      },
+      740: {
+        items: 1
+      },
+      940: {
+        items: 1
+      }
+    },
+
+  }
   projects = [
-    {title: 'Project 1', description: 'This is a description of project 1', skills:['C#', 'Angular', 'ASP.NET', 'API', 'JS', 'HTML', 'CSS', 'Github'], image: 'https://media.istockphoto.com/id/1322220448/photo/abstract-digital-futuristic-eye.jpg?s=612x612&w=0&k=20&c=oAMmGJxyTTNW0XcttULhkp5IxfW9ZTaoVdVwI2KwK5s='},
+    {title: 'Project 1', link:'https://github.com/TempoTuneCorp/TempoTuneCorp.github.io', description: 'This is a description of project 1', skills:['C#', 'Angular', 'ASP.NET', 'API', 'JS', 'HTML', 'CSS', 'Github'], image: 'https://media.istockphoto.com/id/1322220448/photo/abstract-digital-futuristic-eye.jpg?s=612x612&w=0&k=20&c=oAMmGJxyTTNW0XcttULhkp5IxfW9ZTaoVdVwI2KwK5s='},
+    {title: 'Project 2', link:'https://github.com/TempoTuneCorp/TempoTuneCorp.github.io', description: 'This is a description of project 2', skills:['C#', 'Angular', 'ASP.NET', 'API', 'JS', 'HTML', 'CSS', 'Github'], image: 'https://media.istockphoto.com/id/1322220448/photo/abstract-digital-futuristic-eye.jpg?s=612x612&w=0&k=20&c=oAMmGJxyTTNW0XcttULhkp5IxfW9ZTaoVdVwI2KwK5s='},
+    {title: 'Project 3', link:'https://github.com/TempoTuneCorp/TempoTuneCorp.github.io', description: 'This is a description of project ', skills:['C#', 'Angular', 'ASP.NET', 'API', 'JS', 'HTML', 'CSS', 'Github',], image: 'https://media.istockphoto.com/id/1322220448/photo/abstract-digital-futuristic-eye.jpg?s=612x612&w=0&k=20&c=oAMmGJxyTTNW0XcttULhkp5IxfW9ZTaoVdVwI2KwK5s='},
   ]
 
+  
 
   ngAfterViewInit() {
     this.handleMouseMove();
     this.handleMouseLeave();
+    
   }
 
   handleMouseMove() {

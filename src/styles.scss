@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +19,11 @@
     --gray-color-black: #000000;
     --gray-color-500: #595959;
 
-    --primary-bluegreen-color: #a4d5ca;
+    --primary-bluegreen-color: rgb(164, 213, 202);
     --primary-orange-color:rgb(221, 107, 55);
-    --primary-yellow-color:rgb(228, 156, 21);
+    --primary-yellow-color:rgb(228, 217, 70);
+
+    --secondary-orange-color:rgb(255, 169, 40);
+    --secondary-yellow-color:var(--gray-color-500);
+    --secondary-bluegreen-color:rgba(185, 242, 250);
 }

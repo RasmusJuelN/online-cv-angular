@@ -10,6 +10,7 @@ export class ProjectCardComponent {
   @Input() description: any;
   @Input() skills: string[] | undefined;
   @Input() image: any;
+  @Input() link: any;
 
   }
 

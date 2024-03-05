@@ -9,6 +9,10 @@ import { HomeComponent } from './home/home.component';
 import { AboutCardComponent } from './about-card/about-card.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProjectCardComponent } from './project-card/project-card.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
+
 
 @NgModule({
   declarations: [
@@ -18,13 +22,17 @@ import { ProjectCardComponent } from './project-card/project-card.component';
     HomeComponent,
     AboutCardComponent,
     ProjectCardComponent,
+
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
-  ],
+    FontAwesomeModule,
+    CarouselModule,
+    BrowserAnimationsModule,
+    RouterModule
+ ],
   providers: [],
   bootstrap: [AppComponent]
 })

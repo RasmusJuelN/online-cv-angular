@@ -145,7 +145,7 @@
     text-align: center;
   }
   app-about-card {
-    max-width: 700px; // Adjust this value as needed
+    max-width: 700px; 
     width: 100%;
     &:nth-child(odd) {
       float: left;
@@ -248,7 +248,7 @@
     position: absolute;
     border-radius: 20px;
     text-align: center;
-    background-image: linear-gradient(to bottom, rgba(247, 162, 93, 0.836) 0%, rgba(185, 242, 250, 0.856) 100%);
+    background-image: linear-gradient(to bottom, rgba(252, 176, 115, 0.836) 0%, rgba(185, 242, 250, 0.856) 100%);
     transition:transform 1s ease-out;
     box-shadow: 0 5px 10px 4px hsla(0, 0%, 8%, 0.155),-10px 10px 15px -5px hsla(0, 0%, 0%, 0.089)!important;
   
@@ -388,11 +388,27 @@
 
 
   .home-projects-container2{
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
-    background-color: rgb(255, 255, 255);
-    min-height: 350px;
+    height: 350px;
     width: 60%;
     align-items: center;
     margin:auto;
   }
+
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, rgb(255, 255, 255) 0%, transparent 3%, transparent 97%, rgb(255, 255, 255) 100%);
+      pointer-events: none;
+      z-index: 10;}
+  }
+  
+
+
