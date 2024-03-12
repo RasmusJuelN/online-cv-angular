@@ -7,5 +7,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ButtonComponent {
   @Input() buttonClass: string = ''; // CSS class for additional styling
+  @Input() routerLink: any[] | any;
+  @Input() fragment: any;
   @Output() onClick: EventEmitter<any> = new EventEmitter<any>();
 }

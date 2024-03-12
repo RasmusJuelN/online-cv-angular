@@ -442,7 +442,7 @@
     .home-quote {
       box-sizing: border-box;
       width: 100%;
-      min-height: 100vh;
+      min-height: auto;
       color: var(--secondary-color-600);
       font-size: 32px;
       font-family: "Inter", sans-serif;
@@ -452,6 +452,7 @@
       align-items: center;
       flex-direction: column;
       position: relative;
+      margin-top:4rem;
 
       ::after, ::before{
         margin: 0;
@@ -580,14 +581,66 @@
 
 
   .home-footer-container{
-    background-image: linear-gradient(to right, var(--primary-orange-color) 0%, #edfffe 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 20vh;
+    position:relative;
+    overflow:hidden;
     width: 100%;
-    padding-top: 2rem;
-    z-index: 2;
-    flex-direction: column;
+    height:700px;
+
+
   }
   
+  .contact-list {
+    list-style: none;
+    padding: 0;
+    position:absolute;
+    bottom:120px;
+    left:20%;
+    z-index: 4;
+    color:var(--secondary-color-600);
+  
+    li {
+      display: flex;
+      align-items: center;
+
+      padding:10px;
+      font-size: 20px;
+  
+      img {
+        margin-right: 10px;
+        height:30px;
+        width: 30px;
+      }
+    }
+  }
+
+  #svg{
+    position:absolute;
+    bottom:0;
+    height:110%;
+    animation: scaleAnimation 40s  ease-in-out infinite;
+  }
+  
+  @keyframes scaleAnimation {
+    0% {
+      transform: scale(1.2);
+    }
+    20%{
+      transform: scale(1.5);
+    }
+
+    35% {
+      transform: scale(1.2);
+    }
+    50%{
+      transform: scale(1.4);
+    }
+    65% {
+      transform: scale(1);
+    }
+    80%{
+      transform: scale(1.4);
+    }
+    100% {
+      transform: scale(1.2);
+    }
+  }

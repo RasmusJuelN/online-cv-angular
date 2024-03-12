@@ -7,7 +7,7 @@
         </div>
         <div class="header-container1">
           <div class="header-container2">
-            <app-button buttonClass="header-button">CONTACT</app-button>
+            <app-button [routerLink]="['/home']" fragment="contact" buttonClass="header-button">CONTACT</app-button>
           </div>
           <div data-role="BurgerMenu" class="header-burger-menu">
             <svg viewBox="0 0 1024 1024" class="header-icon">
@@ -40,7 +40,7 @@
         </div>
       </div>
       <div class="header-bot">
-        <app-button buttonClass="header-button">CONTACT</app-button>
+        <app-button  buttonClass="header-button">CONTACT</app-button>
       </div>
     </div>
   </div>
