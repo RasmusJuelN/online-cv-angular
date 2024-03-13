@@ -1,4 +1,5 @@
 .about-card {
+  color: var(--secondary-color-600);
     display: flex;
    flex-direction: row-reverse;
     align-items: center;
@@ -28,7 +29,7 @@
   }
   
   p {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.625;
   }
 

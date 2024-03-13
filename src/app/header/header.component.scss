@@ -17,7 +17,7 @@
   }
   .header-nav {
     flex: 0 0 auto;
-    color: var(--gray-color-black);
+    color: var(--secondary-color-600);
     width: 100%;
     height: 60px;
     display: flex;
@@ -63,22 +63,23 @@
     justify-content: center;
   }
   .header-navlink {
-    color: var(--gray-color-500);
-    font-size: 1rem;
+    color: var(gray-color-500);
+    font-size: 16px;
     align-self: center;
     font-style: normal;
     margin-top: 0px;
     transition: 0.3s;
     font-weight: 400;
     line-height: 1.625;
-    margin-left: 25px;
+    margin-left: 35px;
     margin-right: 0px;
     margin-bottom: 0px;
     letter-spacing: -0.025rem;
     text-transform: none;
     text-decoration: none;
     &:hover {
-      color: var(--gray-color-black);
+      
+      color: black;
     }
   }
   .header-container1 {
@@ -165,6 +166,7 @@
   }
   .header-navlink2:hover {
     color: var(gray-color-500);
+
   }
   .header-text1 {
     transition: 0.3s;
