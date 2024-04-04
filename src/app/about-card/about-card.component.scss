@@ -34,3 +34,11 @@
   }
 
   
+  @media screen and (max-width: 770px) {
+    .about-card {
+      flex-direction: column;
+      &.even {
+        flex-direction: column;
+      }
+    }
+  }

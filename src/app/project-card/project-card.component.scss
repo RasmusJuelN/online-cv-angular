@@ -72,5 +72,23 @@
     }
   }
 
-
+  @media screen and (max-width: 770px) {
+    .card{
+      height: 550px;
+      flex-direction: column;
+      .left-section, .right-section{
+        width: 100%;
+        padding:1rem;
+      }
+      .right-section{
+        width: 100%;
+        height:fit-content;
+        padding:0 1rem 1.5rem 1rem;
+      }
+      img{
+        height:230px;
+      }
+    }
+    
+  }
   

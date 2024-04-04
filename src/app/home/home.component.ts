@@ -60,8 +60,10 @@ export class HomeComponent {
   }
   projects = [
     {title: 'Project 1', link:'https://github.com/TempoTuneCorp/TempoTuneCorp.github.io', description: 'This is a description of project 1', skills:['C#', 'Angular', 'ASP.NET', 'API', 'JS', 'HTML', 'CSS', 'Github'], image: 'https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg'},
-    {title: 'Project 2', link:'https://github.com/TempoTuneCorp/TempoTuneCorp.github.io', description: 'This is a description of project 2', skills:['C#', 'Angular', 'ASP.NET', 'API', 'JS', 'HTML', 'CSS', 'Github'], image: 'https://i.imgur.com/S1oE8qI.jpg'},
-    {title: 'Project 3', link:'https://github.com/TempoTuneCorp/TempoTuneCorp.github.io', description: 'This is a description of project 3', skills:['C#', 'Angular', 'ASP.NET', 'API', 'JS', 'HTML', 'CSS', 'Github',], image: 'https://images.assetsdelivery.com/compings_v2/nuttawut2981/nuttawut29811810/nuttawut2981181000061.jpg'},
+    {title: 'Project 2', link:'https://github.com/TempoTuneCorp/TempoTuneCorp.github.io', description: 'This is a description of project 2', skills:['C#', 'JS', 'HTML', 'CSS', 'Github'], image: 'https://i.imgur.com/S1oE8qI.jpg'},
+    {title: 'Project 3', link:'https://github.com/TempoTuneCorp/TempoTuneCorp.github.io', description: 'This is a description of project 3', skills:['C#', 'Angular', 'ASP.NET', 'API', 'JS', 'HTML', 'CSS', 'Github'], image: 'https://images.assetsdelivery.com/compings_v2/nuttawut2981/nuttawut29811810/nuttawut2981181000061.jpg'},
+    {title: 'Project 3', link:'https://github.com/TempoTuneCorp/TempoTuneCorp.github.io', description: 'This is a description of project 3', skills:['C#', 'Angular', 'ASP.NET', 'API', 'CSS', 'Github'], image: 'https://images.assetsdelivery.com/compings_v2/nuttawut2981/nuttawut29811810/nuttawut2981181000061.jpg'},
+  
   ]
 
  

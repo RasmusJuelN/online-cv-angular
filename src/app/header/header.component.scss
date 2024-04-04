@@ -197,7 +197,11 @@
       display: none;
     }
   }
-  @media(max-width: 767px) {
+  @media(max-width: 770px) {
+    .header-header {
+      width: 95%;
+      padding:0;
+    }
     .header-burger-menu {
       display: flex;
     }
