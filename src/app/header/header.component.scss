@@ -3,16 +3,13 @@
   }
   .header-header {
     top: 0px;
-    left: auto;
-    right: auto;
-    width: 100%;
+    margin: 0 auto;
+    width: 92%;
     bottom: auto;
     display: flex;
     z-index: 3;
-    position: fixed;
+    position: sticky;
     max-width: 1420px;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
     justify-content: center;
   }
   .header-nav {
@@ -40,6 +37,7 @@
   .header-container {
     color: var(--secondary-color-600);
     width: 100%;
+    
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -191,7 +189,7 @@
   }
   @media(max-width: 991px) {
     .header-nav {
-      max-width: 960px;
+
     }
     .header-menu {
       display: none;
@@ -199,8 +197,8 @@
   }
   @media(max-width: 770px) {
     .header-header {
-      width: 95%;
-      padding:0;
+
+
     }
     .header-burger-menu {
       display: flex;
