@@ -608,6 +608,7 @@
     padding-top: 5rem;
     z-index: 2;
     flex-direction: column;
+    overflow:hidden;
     .home-text{
       margin-bottom:3rem;
     }
@@ -620,6 +621,7 @@
     padding:0 15%;
     align-items: center;
     margin:auto;
+    overflow:hidden;
 
   }
 
@@ -656,7 +658,8 @@
     
   }
 
-  @media screen and (max-width: 770px) {}
+  @media screen and (max-width: 770px) {
+  }
 
   
   .home-quote-section{
@@ -680,6 +683,7 @@
 
   
     .home-quote {
+      overflow:hidden;
       box-sizing: border-box;
       width: 100%;
       min-height: auto;
@@ -777,6 +781,7 @@
   
   @media screen and (min-width: 770px) {
     .home-quote {
+      
       .home-quote-container {
           width: 100%;
           max-width: 1054px;
@@ -788,6 +793,7 @@
               text-align: left;
               display: flex;
               flex-direction: row-reverse;
+              
               
   
               .testimonial {
@@ -827,8 +833,6 @@
     height:700px;
     font-family:Montserrat ;
     font-weight: 500;
-
-
   }
   
   .contact-container {
@@ -904,6 +908,31 @@
     }
   }
 
+  @media screen and (max-width: 770px) {
+    .contact-container {
+      justify-content: center;
+      display: flex;
+      padding: 0 20px 0 50px;
+      width: 100%;
+      bottom: 0;
+      z-index: 4;
+      margin:0 auto;
+      font-size: 15px;
+
+
+    }
+    .right-info{
+  
+      padding:12px;
+      div{
+        font-size: 15px;
+        margin: 17px 0;
+
+      }
+    }
+  }
+
+
   #svg{
     position:absolute;
     bottom:0;
@@ -936,11 +965,3 @@
     }
   }
 
-  .line-svg{
-    position:absolute;
-    top:0;
-    left:87px;
-    z-index:10;
-    margin-bottom:0;
-
-  }

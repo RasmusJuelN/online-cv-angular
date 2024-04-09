@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnInit, ViewChild, AfterViewInit, ViewChildren, QueryList } from '@angular/core'; 
+import { Component, ElementRef, Input, OnInit, ViewChild, AfterViewInit, ViewChildren, QueryList, HostListener } from '@angular/core'; 
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
@@ -40,7 +40,7 @@ export class HomeComponent {
     pullDrag: true,
     dots: true,
     navSpeed: 700,
-    stagePadding: 150,
+    stagePadding: window.innerWidth < 770 ? 20 : 150,
     margin: 40,
     responsive: {
       0: {
@@ -57,6 +57,14 @@ export class HomeComponent {
       }
     },
 
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.customOptions = {
+      ...this.customOptions,
+      stagePadding: event.target.innerWidth < 770 ? 20 : 150
+    };
   }
   projects = [
     {title: 'Project 1', link:'https://github.com/TempoTuneCorp/TempoTuneCorp.github.io', description: 'This is a description of project 1', skills:['C#', 'Angular', 'ASP.NET', 'API', 'JS', 'HTML', 'CSS', 'Github'], image: 'https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg'},

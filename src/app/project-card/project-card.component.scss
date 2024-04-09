@@ -10,6 +10,7 @@
     margin:10px;
     cursor:grab;
     color:var(--secondary-color-600);
+    overflow:hidden;
     
   }
   img{
@@ -76,12 +77,15 @@
     .card{
       height: 550px;
       flex-direction: column;
+      margin: 1rem 0;
+
+      
       .left-section, .right-section{
-        width: 100%;
+        width: auto;
         padding:1rem;
       }
       .right-section{
-        width: 100%;
+
         height:fit-content;
         padding:0 1rem 1.5rem 1rem;
       }
