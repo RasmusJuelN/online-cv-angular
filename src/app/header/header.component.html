@@ -3,11 +3,11 @@
       <div class="header-container">
         <h1 class="header-text">{{ heading }}</h1>
         <div class="header-menu">
-          <a (click)="navigateToHome()" [routerLink]="['/home']" fragment="top" class="header-navlink">Home</a>
+          <a (click)="goToHome()" [routerLink]="['']"  class="header-navlink">Home</a>
         </div>
         <div class="header-container1">
           <div class="header-container2">
-            <app-button (click)="navigateToContact()" [routerLink]="['/home']" fragment="contact" buttonClass="header-button">CONTACT</app-button>
+            <app-button (click)="goToContact()" [routerLink]="['']" fragment="contact" buttonClass="header-button">CONTACT</app-button>
           </div>
           <div data-role="BurgerMenu" class="header-burger-menu">
             <svg viewBox="0 0 1024 1024" class="header-icon">

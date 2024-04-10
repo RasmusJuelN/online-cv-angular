@@ -1,5 +1,7 @@
 import { Component , Input} from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, Scroll } from '@angular/router';
+import { ScrollService } from '../scroll.service';
+
 
 @Component({
   selector: 'app-header',
@@ -9,23 +11,39 @@ import { Router } from '@angular/router';
 export class HeaderComponent {
   @Input() heading: string = 'Online CV'
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private scrollService: ScrollService) { }
 
-  navigateToContact() {
-    // navigate to a dummy fragment
-    this.router.navigate(['/home'], { fragment: 'd' }).then(() => {
-      // then navigate to the actual fragment
-      this.router.navigate(['/home'], { fragment: 'contact' });
+  goToHome() {
+    this.scrollService.currentHomeSection.subscribe(section => {
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
     });
   }
 
-  navigateToHome() {
-    // navigate to a dummy fragment
-    this.router.navigate(['/home'], { fragment: 'd' }).then(() => {
-      // then navigate to the actual fragment
-      this.router.navigate(['/home'], { fragment: 'home' });
+  goToContact() {
+    this.scrollService.currentContactSection.subscribe(section => {
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
     });
   }
+
+  // navigateToContact() {
+  //   // navigate to a dummy fragment
+  //   this.router.navigate(['/home'], { fragment: 'd' }).then(() => {
+  //     // then navigate to the actual fragment
+  //     this.router.navigate(['/home'], { fragment: 'contact' });
+  //   });
+  // }
+
+  // navigateToHome() {
+  //   // navigate to a dummy fragment
+  //   this.router.navigate(['/home'], { fragment: 'd' }).then(() => {
+  //     // then navigate to the actual fragment
+  //     this.router.navigate(['/home'], { fragment: 'home' });
+  //   });
+  // }
 
 }
 
