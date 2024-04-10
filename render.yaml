@@ -1,7 +1,0 @@
-staticSites:
-  - name: online-cv-angular
-    buildCommand: npm run build
-    publishDir: dist/online-cv-angular
-    routes:
-      - src: /.*
-        dest: /index.html

@@ -88,7 +88,7 @@ export class HomeComponent {
         if (element) element.scrollIntoView({ behavior: 'smooth' });
       }
     });
-    console.log("Page height:",document.body.scrollHeight);
+
   }
 
   scrollToAbout() {
