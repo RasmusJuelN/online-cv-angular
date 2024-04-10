@@ -10,8 +10,20 @@ import { ScrollService } from '../scroll.service';
 })
 export class HeaderComponent {
   @Input() heading: string = 'Online CV'
-
+  menuOpen = false;
   constructor(private router: Router, private scrollService: ScrollService) { }
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
+  
+  openMenu() {
+    this.menuOpen = true;
+  }
+
+  closeMenu() {
+    this.menuOpen = false;
+  }
 
   goToHome() {
     this.scrollService.currentHomeSection.subscribe(section => {

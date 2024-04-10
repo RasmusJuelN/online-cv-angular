@@ -5,42 +5,35 @@
         <div class="header-menu">
           <a (click)="goToHome()" [routerLink]="['']"  class="header-navlink">Home</a>
         </div>
+        
         <div class="header-container1">
           <div class="header-container2">
-            <app-button (click)="goToContact()" [routerLink]="['']" fragment="contact" buttonClass="header-button">CONTACT</app-button>
+            <app-button (click)="goToContact()" [routerLink]="['']"  buttonClass="header-button">CONTACT</app-button>
           </div>
-          <div data-role="BurgerMenu" class="header-burger-menu">
-            <svg viewBox="0 0 1024 1024" class="header-icon">
-              <path
+
+
+          <div data-role="BurgerMenu" class="header-burger-menu" (click)="toggleMenu()">
+            <div class="burger"></div>
+            <svg viewBox="0 0 1024 1024" [ngClass]="{'header-icon': !menuOpen, 'header-icon2': menuOpen}">
+              <path *ngIf="!menuOpen"
                 d="M128 256h768v86h-768v-86zM128 554v-84h768v84h-768zM128 768v-86h768v86h-768z"
+              ></path>
+              <path *ngIf="menuOpen"
+                d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
               ></path>
             </svg>
           </div>
         </div>
       </div>
     </nav>
-    <div data-role="MobileMenu" class="header-mobile-menu">
+    <div data-role="MobileMenu" class="header-mobile-menu" *ngIf="menuOpen">
       <div class="header-top">
         <a class="header-navlink1 Large">
           Soft UI Design System
         </a>
-        <div data-role="CloseMobileMenu" class="header-close-menu">
-          <svg viewBox="0 0 1024 1024" class="header-icon2">
-            <path
-              d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
-            ></path>
-          </svg>
+        <div data-role="CloseMobileMenu" class="header-close-menu" (click)="closeMenu()">
+          
         </div>
-      </div>
-      <div class="header-mid">
-        <div class="header-menu1">
-          <a [routerLink]="['/home']" fragment="top" class="header-navlink2 Large">Home</a>
-          <span class="header-text1 Large">Profile</span>
-          <span class="header-text2 Large">Coming Soon</span>
-        </div>
-      </div>
-      <div class="header-bot">
-        <app-button  buttonClass="header-button">CONTACT</app-button>
       </div>
     </div>
   </div>
