@@ -180,7 +180,7 @@
     padding:5rem 2rem 2rem 2rem;
     display:flex;
     margin:auto;
-
+    overflow:hidden;
     flex-direction: column;
   }
   .about-text {
@@ -857,7 +857,7 @@
   
   .vertical-line {
     height: 200px;
-    border-left: 4px solid var(--secondary-bluegreen-color);
+    border-left: 4px solid var(--secondary-yellow-color);
     position: absolute;
     bottom: 0;
     
@@ -865,7 +865,7 @@
   
   .icon-container {
     position: absolute;
-    background-color: var(--secondary-bluegreen-color);
+    background-color: var(--secondary-yellow-color);
     height:auto;
     left: calc(50% - 28px);
     border-radius: 50px;
@@ -910,7 +910,7 @@
     div{
       font-size: 18px;
       margin: 16px 0;
-      color: var(--secondary-bluegreen-color);
+      color: var(--secondary-yellow-color);
     }
   }
 

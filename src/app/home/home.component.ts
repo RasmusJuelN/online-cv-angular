@@ -71,9 +71,10 @@ export class HomeComponent {
   }
   projects = [
     {title: 'Project 1', link:'https://github.com/TempoTuneCorp/TempoTuneCorp.github.io', description: 'This is a description of project 1', skills:['C#', 'Angular', 'ASP.NET', 'API', 'JS', 'HTML', 'CSS', 'Github'], image: 'https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg'},
-    {title: 'Project 2', link:'https://github.com/TempoTuneCorp/TempoTuneCorp.github.io', description: 'This is a description of project 2', skills:['C#', 'JS', 'HTML', 'CSS', 'Github'], image: 'https://i.imgur.com/S1oE8qI.jpg'},
+    {title: 'Project 2', link:'https://github.com/TempoTuneCorp/TempoTuneCorp.github.io', description: 'This is a description of project 2', skills:['C#', 'JS', 'HTML', 'CSS', 'Github'], image: 'https://img.freepik.com/free-photo/beautiful-mountains-landscape_23-2151151093.jpg'},
     {title: 'Project 3', link:'https://github.com/TempoTuneCorp/TempoTuneCorp.github.io', description: 'This is a description of project 3', skills:['C#', 'Angular', 'ASP.NET', 'API', 'JS', 'HTML', 'CSS', 'Github'], image: 'https://images.assetsdelivery.com/compings_v2/nuttawut2981/nuttawut29811810/nuttawut2981181000061.jpg'},
-    {title: 'Project 3', link:'https://github.com/TempoTuneCorp/TempoTuneCorp.github.io', description: 'This is a description of project 3', skills:['C#', 'Angular', 'ASP.NET', 'API', 'CSS', 'Github'], image: 'https://images.assetsdelivery.com/compings_v2/nuttawut2981/nuttawut29811810/nuttawut2981181000061.jpg'},
+    {title: 'Project 4', link:'https://github.com/TempoTuneCorp/TempoTuneCorp.github.io', description: 'This is a description of project 4', skills:['C#', 'Angular', 'ASP.NET', 'API', 'CSS', 'Github'], image: 'https://img.freepik.com/premium-photo/fantasy-landscape-with-mountains-starry-sky_900706-3910.jpg'},
+    {title: 'Project 5', link:'https://github.com/TempoTuneCorp/TempoTuneCorp.github.io', description: 'This is a description of project 5', skills:['C#', 'Angular', 'ASP.NET', 'API', 'CSS', 'Github', 'API', 'JS', 'HTML', 'CSS', 'Github'], image: 'https://t3.ftcdn.net/jpg/05/51/89/58/360_F_551895859_ZuQWVnCA7DGMf8PDOLVeNiygUS4AjGc0.jpg'},
   
   ]
 
