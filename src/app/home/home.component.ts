@@ -64,17 +64,27 @@ export class HomeComponent {
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
-    this.customOptions = {
-      ...this.customOptions,
-      stagePadding: event.target.innerWidth < 770 ? 20 : 150
-    };
+    let stagePadding;
+
+  if (event.target.innerWidth < 770) {
+    stagePadding = 20;
+  } else if (event.target.innerWidth >= 770 && event.target.innerWidth < 1100) {
+    stagePadding = 40;
+  } else {
+    stagePadding = 150;
+  }
+
+  this.customOptions = {
+    ...this.customOptions,
+    stagePadding: stagePadding
+  };
   }
   projects = [
-    {title: 'Project 1', link:'https://github.com/TempoTuneCorp/TempoTuneCorp.github.io', description: 'This is a description of project 1', skills:['C#', 'Angular', 'ASP.NET', 'API', 'JS', 'HTML', 'CSS', 'Github'], image: 'https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg'},
-    {title: 'Project 2', link:'https://github.com/TempoTuneCorp/TempoTuneCorp.github.io', description: 'This is a description of project 2', skills:['C#', 'JS', 'HTML', 'CSS', 'Github'], image: 'https://img.freepik.com/free-photo/beautiful-mountains-landscape_23-2151151093.jpg'},
-    {title: 'Project 3', link:'https://github.com/TempoTuneCorp/TempoTuneCorp.github.io', description: 'This is a description of project 3', skills:['C#', 'Angular', 'ASP.NET', 'API', 'JS', 'HTML', 'CSS', 'Github'], image: 'https://images.assetsdelivery.com/compings_v2/nuttawut2981/nuttawut29811810/nuttawut2981181000061.jpg'},
-    {title: 'Project 4', link:'https://github.com/TempoTuneCorp/TempoTuneCorp.github.io', description: 'This is a description of project 4', skills:['C#', 'Angular', 'ASP.NET', 'API', 'CSS', 'Github'], image: 'https://img.freepik.com/premium-photo/fantasy-landscape-with-mountains-starry-sky_900706-3910.jpg'},
-    {title: 'Project 5', link:'https://github.com/TempoTuneCorp/TempoTuneCorp.github.io', description: 'This is a description of project 5', skills:['C#', 'Angular', 'ASP.NET', 'API', 'CSS', 'Github', 'API', 'JS', 'HTML', 'CSS', 'Github'], image: 'https://t3.ftcdn.net/jpg/05/51/89/58/360_F_551895859_ZuQWVnCA7DGMf8PDOLVeNiygUS4AjGc0.jpg'},
+    {title: 'Fitness Tracker App', link:'https://github.com/RasmusJuelN/ShapeShifter', description: 'My Project for H3 - a 6 week project made using Angular. <br> It is a fullstack fitness tracker app, in which you can save, update and delete workouts with exercises. It contains a login and register page using JWT and password hashing for security. It also includes a BMI tracker.', skills:['C#', 'Angular/TS', 'ASP.NET Web API', 'HTML', 'CSS', 'Github', 'JWT', 'Entity Framework', 'MS SQL'], image: 'https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg'},
+    {title: 'Music Player App', link:'https://github.com/TempoTuneCorp/TempoTuneCorp.github.io', description: 'Group project in Angular. It contains a music player with a list of songs, which can be added to a favourites list. It also has a profile page with profile data that can be edited as desired. I learned how to use github branching and version control, while working with multiple people.', skills:['C#', 'Angular/TS', 'JS', 'ASP.NET Web API', 'HTML', 'CSS', 'Github', 'JWT', 'Entity Framework', 'MS SQL'], image: 'https://img.freepik.com/free-photo/beautiful-mountains-landscape_23-2151151093.jpg'},
+    {title: 'Temperature sensor on ESP32', link:'https://github.com/RasmusJuelN/WebSocket', description: 'IoT project using ESP32 microcontroller. <br> It is made to orchestrate the interactions between various hardware components, web server functionalities, and data logging mechanisms to create a temperature monitoring and logging system accessible over the web.', skills:['C++', 'HTML', 'Arduino JSON', 'ESP32', 'WebSocket', 'SD/SPIFFS', 'Data Logging', 'Async Webserver'], image: 'https://images.assetsdelivery.com/compings_v2/nuttawut2981/nuttawut29811810/nuttawut2981181000061.jpg'},
+    {title: 'Python with ETL', link:'https://github.com/RasmusJuelN/pyspark-devcontainer', description: 'Python project with ETL (Extract, Transform, Load) pipeline, to process real-time data on electricity production in Denmark.<br> I am using PySpark for data transformation and summarization, Matplotlib for data visualization, and standard Python libraries for other tasks such as HTTP requests and time handling.', skills:['Python', 'Docker', 'PySpark pandas & sql', 'HTTP requests', 'Github'], image: 'https://img.freepik.com/premium-photo/fantasy-landscape-with-mountains-starry-sky_900706-3910.jpg'},
+    {title: 'Project 5', link:'https://github.com/TempoTuneCorp/TempoTuneCorp.github.io', description: 'This is a description of project 5', skills:['C#', 'ASP.NET', 'API', 'CSS', 'Github'], image: 'https://t3.ftcdn.net/jpg/05/51/89/58/360_F_551895859_ZuQWVnCA7DGMf8PDOLVeNiygUS4AjGc0.jpg'},
   
   ]
 
