@@ -943,7 +943,7 @@
     position:absolute;
     bottom:0;
     height:110%;
-    animation: scaleAnimation 40s  ease-in-out infinite;
+    animation: scaleAnimation 10s  ease-in-out infinite;
   }
   
   @keyframes scaleAnimation {
@@ -953,7 +953,6 @@
     20%{
       transform: scale(1.5);
     }
-
     35% {
       transform: scale(1.2);
     }
