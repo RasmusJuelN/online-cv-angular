@@ -12,7 +12,6 @@ import { ProjectCardComponent } from './project-card/project-card.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
-import { RevealDirective } from './reveal.directive';
 
 
 @NgModule({
@@ -23,7 +22,6 @@ import { RevealDirective } from './reveal.directive';
     HomeComponent,
     AboutCardComponent,
     ProjectCardComponent,
-    RevealDirective,
 
     
   ],

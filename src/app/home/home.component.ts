@@ -98,6 +98,7 @@ export class HomeComponent {
     this.scrollService.changeContactSection(this.contactSection.nativeElement);
   }
 
+
   ngOnInit() {
     // this.route.fragment.subscribe(fragment => {
     //   if (fragment) {
@@ -112,6 +113,10 @@ export class HomeComponent {
 
   scrollToAbout() {
     this.homeAbout.nativeElement.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  goToContact() {
+    this.contactSection.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   handleMouseMove() {
